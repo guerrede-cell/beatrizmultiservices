@@ -17,9 +17,9 @@ export const siteConfig = {
     country: "US",
   },
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    linkedin: "https://linkedin.com/",
+    facebook: "https://www.facebook.com/beatrizmultiservices/",
+    instagram: "https://www.instagram.com/beatrizmultiservices/",
+    linkedin: "https://www.linkedin.com/in/beatrizgarcia717/",
   },
   ogImage: "/og-default.jpg",
 };
