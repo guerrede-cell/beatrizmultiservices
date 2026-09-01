@@ -35,7 +35,7 @@ export default function Nav() {
       }`}
     >
       <Link href="/" className="order-1 flex items-center transition-transform duration-300 hover:scale-105">
-        <Image src="/images/logo-navy.png" alt="Beatriz Multi Service" width={180} height={56} className="h-[52px] w-auto" priority />
+        <Image src="/images/logo-navy.png" alt="Beatriz Multi Service" width={358} height={500} className="h-[52px] w-auto" priority />
       </Link>
 
       {/* Hamburger (mobile only) */}
@@ -72,11 +72,7 @@ export default function Nav() {
         </Link>
 
         {/* Services dropdown */}
-        <div
-          className="relative md:group"
-          onMouseEnter={() => window.innerWidth > 900 && setServicesOpen(true)}
-          onMouseLeave={() => window.innerWidth > 900 && setServicesOpen(false)}
-        >
+        <div className="relative group">
           <button
             onClick={() => setServicesOpen((v) => !v)}
             className="flex w-full items-center justify-between gap-[5px] border-b border-cream-dark py-[14px] text-left text-[14px] tracking-[0.5px] text-ink md:w-auto md:border-none md:py-0"
@@ -85,26 +81,28 @@ export default function Nav() {
             <span
               className={`text-[10px] text-gold transition-transform duration-300 ${
                 servicesOpen ? "rotate-180" : ""
-              }`}
+              } md:rotate-0 md:group-hover:rotate-180`}
             >
               &#9662;
             </span>
           </button>
 
           <div
-            className={`overflow-hidden transition-[max-height] duration-350 ease-in-out md:absolute md:left-0 md:top-full md:mt-[14px] md:min-w-[260px] md:rounded md:border md:border-cream-dark md:bg-white md:py-2 md:shadow-[0_20px_40px_rgba(11,18,53,0.15)] md:transition-[opacity,transform,visibility] md:duration-250 ${
-              servicesOpen ? "max-h-[400px] md:opacity-100 md:visible md:translate-y-0" : "max-h-0 md:max-h-none md:opacity-0 md:invisible md:-translate-y-2"
-            } ${!servicesOpen ? "md:pointer-events-none" : "md:pointer-events-auto"} flex flex-col bg-cream-dark pl-[14px] md:pl-0 md:bg-white`}
+            className={`overflow-hidden transition-[max-height] duration-350 ease-in-out md:max-h-none md:overflow-visible md:absolute md:left-0 md:top-full md:min-w-[260px] md:pt-[14px] md:pointer-events-none md:opacity-0 md:invisible md:-translate-y-2 md:transition-[opacity,transform,visibility] md:duration-250 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0 md:group-hover:pointer-events-auto ${
+              servicesOpen ? "max-h-[400px]" : "max-h-0"
+            } flex flex-col bg-cream-dark pl-[14px] md:pl-0 md:bg-transparent`}
           >
-            {services.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="border-b border-black/5 py-3 text-[13.5px] text-ink transition-[padding] duration-200 hover:pl-2 hover:text-gold md:border-none md:px-[22px] md:py-[11px] md:hover:bg-cream md:hover:pl-[28px]"
-              >
-                {s.name}
-              </Link>
-            ))}
+            <div className="md:rounded md:border md:border-cream-dark md:bg-white md:py-2 md:shadow-[0_20px_40px_rgba(11,18,53,0.15)]">
+              {services.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/services/${s.slug}`}
+                  className="block border-b border-black/5 py-3 text-[13.5px] text-ink transition-[padding] duration-200 hover:pl-2 hover:text-gold md:border-none md:px-[22px] md:py-[11px] md:hover:bg-cream md:hover:pl-[28px]"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 

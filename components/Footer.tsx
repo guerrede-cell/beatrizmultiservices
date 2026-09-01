@@ -11,8 +11,8 @@ export default function Footer() {
         <Image
           src="/images/logo-navy.png"
           alt="Beatriz Multi Service"
-          width={170}
-          height={53}
+          width={358}
+          height={500}
           className="h-[90px] w-auto md:h-[70px]"
         />
 
