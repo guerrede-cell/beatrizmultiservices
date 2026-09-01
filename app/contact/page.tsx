@@ -63,6 +63,8 @@ export default function ContactPage() {
           <div className="mt-[30px] flex gap-[14px] border-t border-white/10 pt-[26px]">
             <a
               href={siteConfig.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-[13px] text-[#C7CAE0] hover:border-gold-light hover:text-gold-light"
             >
@@ -70,6 +72,8 @@ export default function ContactPage() {
             </a>
             <a
               href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-[13px] text-[#C7CAE0] hover:border-gold-light hover:text-gold-light"
             >
@@ -77,6 +81,8 @@ export default function ContactPage() {
             </a>
             <a
               href={siteConfig.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-[13px] text-[#C7CAE0] hover:border-gold-light hover:text-gold-light"
             >

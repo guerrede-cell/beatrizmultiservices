@@ -48,9 +48,27 @@ export default function Footer() {
             </a>
             <a
               href={siteConfig.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block py-1 text-[13px] hover:pl-[3px] hover:text-gold transition-[color,padding] duration-200"
             >
-              Facebook &middot; Instagram &middot; LinkedIn
+              Facebook
+            </a>
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-1 text-[13px] hover:pl-[3px] hover:text-gold transition-[color,padding] duration-200"
+            >
+              Instagram
+            </a>
+            <a
+              href={siteConfig.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-1 text-[13px] hover:pl-[3px] hover:text-gold transition-[color,padding] duration-200"
+            >
+              LinkedIn
             </a>
           </div>
         </div>
