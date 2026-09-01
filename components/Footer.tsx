@@ -8,13 +8,15 @@ export default function Footer() {
   return (
     <footer className="bg-cream-dark px-[7%] pb-[26px] pt-[50px] text-[#6B6E7A] md:pt-[50px]">
       <div className="flex flex-col gap-[34px] border-b border-navy/10 pb-9 md:mb-[22px] md:flex-row md:items-start md:justify-between md:gap-0">
-        <Image
-          src="/images/logo-navy.png"
-          alt="Beatriz Multi Service"
-          width={358}
-          height={500}
-          className="h-[90px] w-auto md:h-[70px]"
-        />
+        <Link href="/" className="inline-block flex-shrink-0 transition-transform duration-300 hover:scale-105">
+          <Image
+            src="/images/logo-navy.png"
+            alt="Beatriz Multi Service"
+            width={358}
+            height={500}
+            className="h-[90px] w-auto md:h-[70px]"
+          />
+        </Link>
 
         <div className="flex w-full flex-col gap-7 md:w-auto md:flex-row md:gap-[60px]">
           <div>
